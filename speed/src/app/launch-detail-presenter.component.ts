@@ -17,6 +17,8 @@ export class LaunchDetailPresenterComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private store: Store<State> ) { }
 
   ngOnInit() {
+    console.log('onInit LaunchDetailPresenterComponent');
+    
     this.store.select('launch').subscribe(launchesState => {
       const id = this.activatedRoute.snapshot.params['id'];
       this.launch = launchesState.launches.filter(

@@ -64,7 +64,7 @@ export class LaunchesPresenterComponent implements OnInit {
 
   public onClick = (idLanzamiento: number) => {
     //this.detalleLanzamiento.emit(idLanzamiento);
-    this.router.navigate(['launchdetail', idLanzamiento], { relativeTo: this.route });
+    this.router.navigate(['../../launch', idLanzamiento], { relativeTo: this.route });
   }
 
 

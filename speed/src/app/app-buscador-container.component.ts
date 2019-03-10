@@ -112,7 +112,6 @@ detalleLanzamiento(idLanzamiento) {
     }
 
   ngOnInit() {
-    console.log('BuscadorContainerComponent onInit');
 
    this.loadData();
     this.criterios = this.buscadorService.getCriterios();

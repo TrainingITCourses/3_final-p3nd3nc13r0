@@ -12,7 +12,8 @@
         </tr>
         <tr *ngFor="let launch of filteredLaunches">
             <td>{{launch.id}}</td>
-            <!-- <td><a [routerLink]="['launchdetail',launch.id]">{{launch.name}}</a></td> -->
+            <!-- <td><a [routerLink]="[../../launch, launch.id]">{{launch.name}}</a></td> -->
+            <!-- <td><a [routerLink]="['launch',launch.id]">{{launch.name}}</a></td> -->
             <td><button (click)="onClick(launch.id)">ver lanzamientos en estado {{launch.name}}</button></td>
         </tr>
 
