@@ -1,0 +1,17 @@
+<div>
+    <p>Lista de status de lanzamiento</p>
+    <table>
+        <tr>
+            <th>Nombre estado</th>
+            <th>Lanzamientos en estado :</th>
+        </tr>
+        <tr *ngFor="let status of statuses">
+            <td>{{status.name}}</td>
+            <!--  <td><button (click)="onClick(status.id)">ver lanzamientos en estado {{status.name}}</button></td> -->
+            <td>
+                <a [routerLink]="['launches',status.id]">ver lanzamientos en estado {{status.name}}</a>
+            </td>
+        </tr>
+
+    </table>
+</div>

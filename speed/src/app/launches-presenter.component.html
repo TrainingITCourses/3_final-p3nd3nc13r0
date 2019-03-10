@@ -1,0 +1,20 @@
+<div>
+    Resultados búsqueda:
+    <app-contador-presenter [contador]="contador">
+    </app-contador-presenter>
+    <app-botonera-lanzamientos-presenter (reordenar)="reordenar($event)">
+    </app-botonera-lanzamientos-presenter>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <tr *ngFor="let launch of filteredLaunches">
+            <td>{{launch.id}}</td>
+            <!-- <td><a [routerLink]="['launchdetail',launch.id]">{{launch.name}}</a></td> -->
+            <td><button (click)="onClick(launch.id)">ver lanzamientos en estado {{launch.name}}</button></td>
+        </tr>
+
+    </table>
+</div>
